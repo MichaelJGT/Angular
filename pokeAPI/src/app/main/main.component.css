@@ -1,0 +1,17 @@
+.padre{
+    display: flex;
+
+}
+.pokemon{
+  width: 25%;
+  background-color: tomato;
+  margin: 2px;
+  padding: 2px;
+}
+.habilidad{
+    background-color: lightgreen;
+}
+.contenedor{
+    width: 50%;
+    background-color: lightblue;
+}

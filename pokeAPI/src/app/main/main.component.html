@@ -1,0 +1,12 @@
+<div class="padre">
+    <div class="contenedor">
+        <div class="pokemon" *ngFor="let poke of listaPokemon" (click)="buscarDetalles(poke)">
+            {{poke}}
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="habilidad" *ngFor="let ability of listaMoves">
+            {{ability}}
+        </div>
+    </div>
+</div>
