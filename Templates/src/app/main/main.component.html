@@ -1,0 +1,19 @@
+<div class="contenedor">
+    
+    <div *ngFor="let elemento of lista" [ngClass]="{
+        'producto': true,
+        'carne': elemento.tipo == 'carne',
+        'fruta': elemento.tipo == 'fruta'
+    }" >
+        <div class="titulo">{{elemento.nombre}}</div>
+        <div [ngClass]="{
+            'cantidad': true,
+            'red':elemento.cantidad <= 5
+        }">{{elemento.cantidad}}</div>
+        <div class="tipo">
+            <span *ngIf="elemento.cantidad > 0">{{elemento.tipo}}</span>
+            <span *ngIf="elemento.cantidad == 0">No dispoible!</span>
+        </div>
+    </div>
+    
+</div>

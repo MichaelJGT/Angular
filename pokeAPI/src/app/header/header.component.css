@@ -1,0 +1,29 @@
+.cabecera{
+    width: 100vw;
+    height: 90px;
+    background-color: crimson;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.imagen{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+.rotulo{
+    position: absolute;
+    color: crimson;
+    font-family: 'Holtwood One SC';font-size: 50px;
+    left: 25px;
+}
+.rotulo2{
+    position: absolute;
+    color: black;
+    font-family: 'Holtwood One SC';font-size: 50px;
+    display:flex;
+    align-items: center;
+    right: 25px;
+
+}

@@ -1,0 +1,14 @@
+Abrir locahost y cargar angular 
+ng serve --open
+
+Crea proyecto
+ng new nombreProyecto
+
+Sirve el proyecto
+ng serve
+
+Crea componente
+ng g c nombreComponente
+
+Instala 
+npm i

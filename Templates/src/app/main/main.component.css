@@ -1,0 +1,53 @@
+.contenedor{
+    width: auto;
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.producto{
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    position:relative;
+    margin: 5px;
+}
+.titulo{
+    width: 100%;
+    height: 25%;
+    color: black;
+    display: flex;
+    justify-content:center;
+    
+}
+.cantidad{
+    width: 100%;
+    height: 25%;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.tipo {
+    width: 100%;
+    height: 15%;
+    color: snow;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+}
+.fruta{
+    background-color: springgreen;
+}
+.carne{
+    background-color: burlywood;
+}
+.red{
+    color: tomato;
+}
