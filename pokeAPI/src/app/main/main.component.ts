@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokeService.getAll().then(response=>{
-      this.mapPokemons(response.results)
+      this.mapPokemons(response["results"])
     })
   }
 
@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
   buscarDetalles(pokemonNombre){
     this.listaMoves=[]
     this.pokeService.getByName(pokemonNombre).then(response=>{
-      for(let objeto of response.moves){
+      for(let objeto of response["moves"]){
         this.listaMoves.push(objeto.move.name)
         //console.log(objeto)
       }

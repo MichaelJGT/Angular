@@ -1,0 +1,16 @@
+<div class="contenedor">
+  <form [formGroup]="buscador">
+    <input
+      type="text"
+      (input)="funcionClick()"
+      (keyup.enter)="buscar2()"
+      placeholder="Nombre Pokemon"
+      formControlName="nombrePokemon"
+    />
+    <div class="consulta">
+      <div *ngFor="let poke of etiqueta" (click)="buscar(poke)">
+        {{poke}}
+      </div>
+    </div>
+  </form>
+</div>

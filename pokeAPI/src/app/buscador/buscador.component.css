@@ -1,0 +1,15 @@
+.contenedor{
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+}
+form{
+    margin-top: 150px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid green;
+}
+.consulta{
+    border: 1px solid green;
+}

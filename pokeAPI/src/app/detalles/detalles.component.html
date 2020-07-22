@@ -1,0 +1,23 @@
+<div class="contenedor" *ngIf="pokeInfo">
+  <div class="imagen">
+    <div><img src="{{pokeInfo.sprites.front_default}}" alt="" /></div>
+    <div><img src="{{pokeInfo.sprites.back_shiny_female}}" alt="" /></div>
+  </div>
+  <div class="nombre">
+    {{pokeInfo.name}}
+  </div>
+  <div class="habilidades">
+    <div class="habilidad" *ngFor="let abili of pokeInfo.abilities">
+      {{abili.ability.name}}
+    </div>
+  </div>
+  <div class="movimientoS">
+    <div class="movimiento" *ngFor="let movi of pokeInfo.moves">
+      {{movi.move.name}}
+    </div>
+  </div>
+</div>
+
+<div *ngIf="error">
+  <p>Algo ha fallado</p>
+</div>

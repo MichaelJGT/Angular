@@ -1,0 +1,23 @@
+.contenedor{
+    display: flex;
+    
+    background-color: lightgreen;
+}
+.imagen{
+    display: flex;
+    flex-direction: column;
+    background-color: lightsalmon;
+}
+.habilidadeS{
+    background-color: lightsteelblue;
+}
+.habilidad{
+    background-color: magenta;
+}
+.movimientoS{
+    background-color: lightgray;
+}
+.movimiento{
+    background-color: white;
+}
+.nombre{}
