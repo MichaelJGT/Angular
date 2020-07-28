@@ -7,6 +7,9 @@ import {
 } from "@angular/forms";
 import { PokeapiService } from "../pokeapi.service";
 import { Router } from "@angular/router";
+import { NgRedux } from '@angular-redux/store';
+import { IappState } from '../store';
+import { CAMBIAR_NOMBRE } from '../redux-actions';
 @Component({
   selector: "app-buscador",
   templateUrl: "./buscador.component.html",
@@ -20,11 +23,23 @@ export class BuscadorComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private pokeService: PokeapiService,
-    private ruta: Router
+    private ruta: Router,
+    private redux: NgRedux<IappState>
   ) {}
 
   ngOnInit(): void {
     this.getPokemon(), this.construirFormulario();
+    //mirar estado actual
+    this.redux.getState()
+    //modificar estados
+    this.redux.dispatch({
+      type: CAMBIAR_NOMBRE,
+      data: {usuario: "micha"}
+    })
+    //subscribirnos a cambios del estado
+    this.redux.subscribe(()=>{
+      console.log("ha habido un cambio")
+    })
   }
 
   mapPokemons(arrayPokemons) {
@@ -65,4 +80,6 @@ export class BuscadorComponent implements OnInit {
   iraDetalles(nombre){
     this.ruta.navigate(["/detalles",nombre])
   }
+
+  
 }

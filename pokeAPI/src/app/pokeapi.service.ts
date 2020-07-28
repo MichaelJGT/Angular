@@ -12,7 +12,7 @@ export class PokeapiService {
    }
 
    getAll(){
-     let url= `${this.base}pokemon?limit=1000`
+     let url= `${this.base}pokemon?limit=50`
      return this.http.get(url).toPromise()
    }
    getByName(name){

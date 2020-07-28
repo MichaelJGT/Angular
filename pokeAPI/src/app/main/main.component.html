@@ -1,7 +1,7 @@
 <div class="padre">
     <div class="contenedor">
-        <div class="pokemon" *ngFor="let poke of listaPokemon" (click)="buscarDetalles(poke)">
-            {{poke}}
+        <div class="pokemon" *ngFor="let poke of listaPokemon" >
+            <app-cards [data]="{esteNombre: poke}" (detalles)="verDetalles($event)"></app-cards>
         </div>
     </div>
     <div class="contenedor">
